@@ -1,0 +1,147 @@
+    1  #!/bin/bash -li
+    2  cd /ide/xterm || exit
+    3  exec /ide/xterm/bin/node /ide/xterm/index.cjs "$@"
+    4  vim create.sh
+    5  bash create.sh
+    6  ls
+    7  rm *.txt
+    8  ls
+    9  mkdir users
+   10  cd users
+   11  bash create.sh
+   12  bash ../create.sh
+   13  ls
+   14  cd../
+   15  cd ../
+   16  mkdir groups
+   17  cd groups
+   18  vim ../create.sh
+   19  bash ../create.sh
+   20  ls
+   21  cd ../
+   22  mkdir subjects
+   23  cd subjects
+   24  vim ../create.sh
+   25  bash ../create.sh
+   26  ls
+   27  histoty
+   28  history
+   29  cd ../
+   30  vim commads_log.txt
+   31  git remote remove origin 
+   32  git remote add origin https://github.com/youqueen/september3.git
+   33  git add . && git commit -m "task 1" && git push origin main
+   34  ssh-keygen
+   35  cat ~/.ssh/id_rsa.pub
+   36  git remote remove origin
+   37  git remote add origin
+   38  git@github.com:youqueen/september3.git
+   39  git remote add origin
+   40  git remote add origin git@github.com:youqueen/september3.git
+   41  git add . && git commit -m "task 1" && git push origin main
+   42  git status
+   43  cd ../
+   44  git clone git@github.com:youqueen/september3.git
+   45  ls -a
+   46  mv september3 test1
+   47  git clone git@github.com:youqueen/september3.git
+   48  cd september3
+   49  cp ../test1/* . -r
+   50  ls
+   51  git add . && git commit -m "task 1" && git push origin main
+   52  mkdir task1
+   53  cd task1
+   54  cp ../* . -r
+   55  cp ../groups . -r && cp ../users . -r && cp ../subjects . -r && cp *.txt .
+   56  ls
+   57  rm -rf ../groups && rm -rf ../users && rm -rf ../subjects
+   58  ls ..
+   59  rm *.txt
+   60  cp ../*.txt && rm ../*.txt
+   61  cp ../*.txt . && rm ../*.txt
+   62  ls
+   63  git add . && git commit -m "task 1" && git push origin main
+   64  ls ..
+   65  cd ../
+   66  mkdir task2
+   67  cd task2
+   68  mkdir example home
+   69  ls
+   70  cd example
+   71  touch example{1..879}.txt
+   72  ls
+   73  cd ../
+   74  cd home
+   75  mkdir user1
+   76  cd home1
+   77  mkdir files photos videos
+   78  cd home
+   79  ls
+   80  rm -rf files photos videos 
+   81  ls
+   82  cd user1
+   83  ls
+   84  mkdir files photos videos
+   85  cd files && touch file{1..30}.txt && cd ..
+   86  cd photos && touch photo{1..204}.txt && cd ..
+   87  cd videos && touch video{1..29}.txt && cd ..
+   88  cd ../ && mkdir user2 && cp ../user1/* user2/ -r
+   89  cd ../ && mkdir user2 && cp user1/* user2/ -r 
+   90  cd home
+   91  ls
+   92  ls user2
+   93  cp user1/* user2/ -r
+   94  ls user2
+   95  mkdir user3 && cp user1/* user3/ -r
+   96  mkdir user3 && cp user1/* user4/ -r
+   97  mkdir user4 && cp user1/* user4/ -r
+   98  mkdir user5 && cp user1/* user5/ -r
+   99  cd ../ && history > commands_log.txt
+  100  cat commands_log.txt
+  101  cd ../ && git add . && git commit -m "task2" && git push origin main
+  102  mkdir task3
+  103  cd task3
+  104  git checkout -b users && mkdir users && cd users
+  105  ls
+  106  touch file{1..3}.txt && git add . && git commit -m "files added" && git push origin users
+  107  rm file1.txt && touch file{4..6}.txt && git add . && git commit -m "some file added" && git push origin main
+  108  git status
+  109  git add . && git commit -m "some file added" && git push origin main 
+  110  git add . && git commit -m "some file added" && git push origin users 
+  111  ls
+  112  git add .
+  113  git status
+  114  git pull origin users
+  115  git reset --hard
+  116  ls
+  117  git push origin users
+  118  rm file3.txt file4.txt
+  119  ls
+  120  echo "some chng" > file5.txt && cat file5.txt > file6.txt
+  121  git add . && git commit -m "file change" && git push origin users
+  122  git checkout -b games
+  123  mkdir games
+  124  cd games
+  125  cd ../ && rm -rf games && cd ../ && mkdir games && cd games
+  126  touch file{1..3}.txt && git add . && git commit -m "files added" && git push origin games
+  127  rm file1.txt && touch file{4..6}.txt && git add . && git commit -m "2" && git push origin games
+  128  rm file2.txt file3.txt && echo "smth" > file5.txt && cat file5.txt > file6.txt && git commit -m "3" && git push origin games
+  129  git add . && git commit -m "smth" && git push origin games
+  130  cd ../ && git checkout -b features && mkdir features && cd features
+  131  touch file{1..3}.txt && git add . && git commit -m "files added" && git push origin features
+  132  rm file1.txt && touch file{4..6}.txt && git add . && git commit -m "2" && git push origin features
+  133  m file2.txt file3.txt && echo "smth" > file5.txt && cat file5.txt > file6.txt && git commit -m "3" && git push origin features
+  134  rm file2.txt file3.txt && echo "smth" > file5.txt && cat file5.txt > file6.txt && git commit -m "3" && git push origin features
+  135  git add . && git commit -m "smth" && git push origin features
+  136  cd ../ && git checkout games && git merge featuers && git push origin games
+  137  git checkout features && echo "wdfefe" > features/file4.txt && git add . && git commit -m "commit" && git push origin features && cd .. && git checkout games && git merge features && git push origin games
+  138  cd
+  139  git clone git@github.com:youqueen/oct.git
+  140  cd
+  141  cd oct
+  142  mkdir task1 && cd task1 && touch Dockerfile && vim docker-compose.yml
+  143  docker-compose up -d
+  144  vim docker-compose.yml 
+  145  docker-compose up -d
+  146  docker ps
+  147  history > commands.txt
